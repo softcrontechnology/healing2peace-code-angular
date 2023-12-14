@@ -1,0 +1,214 @@
+<!-- start ebook section -->
+<!-- <section class="ebook-section" style="background-image: url(assets/images/blog.png);">
+    <div class="container">
+        <div class="row">
+            <div class="content-column col-lg-12 col-md-12 col-sm-12">
+                <div class="content-box box-con">
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+<!--end ebook section -->
+<!-- blog start here -->
+<!-- <div class="blog_section"> -->
+<div class="container-fluid blog_section blog_section1">
+    <div class="row blog_section_row">
+        <div class="col-md-12 col-sm-12">
+            <div class="row">
+                <div class="col-md-8 col-sm-12">
+                    <div class="row">
+                        <div *ngFor="let data of blogDetails | async; let i = index;"
+                            class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <article class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src='{{imageUrl+ "assets/blogs/" + data?.blog_image }}' id="test"
+                                        alt="Road Map to Success">
+                                </div>
+                                <div class="blog-post-content">
+                                    <ul class="post-meta">
+                                        <li>
+                                            <a><i class="fas fa-user-alt"></i>By: {{data?.author_name}} </a>
+                                        </li>
+                                        <li class="ml-1">
+                                            <a> <span><i class="fas fa-calendar-alt"></i>{{data?.created_on |
+                                                    date:'mediumDate'}}</span></a>
+                                        </li>
+                                        <li class="ml-1">
+                                            <a><i class="fas fa-eye"></i>{{data?.blog_view}}</a>
+                                        </li>
+                                        <li class="ml-1">
+                                            <a> <span><i class="fa-solid fas fa-comment"></i>{{(commentsDetails |
+                                                    async)?.length}}</span> </a>
+                                        </li>
+                                        <li class="ml-1 tag_cat float-right">
+                                            <a> <span><i class="fas fa-hashtag"></i>{{data?.category_name}}</span> </a>
+                                        </li>
+                                    </ul>
+                                    <div class="tag_cat1">
+                                        <a> <span><i class="fas fa-hashtag"></i> {{data?.category_name}}</span> </a>
+                                    </div>
+
+                                    <div class="post-footer ">
+                                        <div class="text-center d-inline-block post-div">
+                                            <a href='{{"https://www.instagram.com/the.wisdom.pro/" + "?mini=true&url="+ baseUrl + "/blog-details" + "/"+ blogFriendlyUrl}}'
+                                                target="_blank" class="categories_social">
+                                                <div class="categories"><i class="fab fa-instagram"></i></div>
+                                            </a>
+
+                                        </div>
+                                        <div class="text-center d-inline-block post-div">
+                                            <a href='{{"http://www.facebook.com/sharer.php?u="+ "http://healingpeace-959217634.ap-south-1.elb.amazonaws.com" + "/blog-details" + "/"+ blogFriendlyUrl}}'
+                                                target="_blank" class="categories_social">
+                                                <div class="categories"><i class="fab fa-facebook-f"></i></div>
+                                            </a>
+                                        </div>
+                                        <div class="text-center d-inline-block post-div">
+                                            <a href='{{"https://twitter.com/share?url="+ "http://healingpeace-959217634.ap-south-1.elb.amazonaws.com" + "/blog-details" + "/"+ blogFriendlyUrl}}'
+                                                target="_blank" class="categories_social">
+                                                <div class="categories"><i class="fab fa-twitter"></i></div>
+                                            </a>
+                                        </div>
+                                        <!-- <div class="text-center d-inline-block post-div">
+                                            <a href='{{"https://www.facebook.com/profile.php?id=100072795660912" + "?mini=true&url="+ baseUrl + "/blog-details" + "/"+ blogFriendlyUrl}}' target="_blank" class="categories_social">
+                                                <div class="categories"><i class="fab fa-facebook-f"></i></div>
+                                            </a>
+                                        </div>
+                                        <div class="text-center d-inline-block post-div">
+                                            <a href='{{"https://twitter.com/Anju29peace" + "?mini=true&url="+ baseUrl + "/blog-details" + "/"+ blogFriendlyUrl}}' target="_blank" class="categories_social">
+                                                <div class="categories"><i class="fab fa-twitter"></i></div>
+                                            </a>
+                                        </div> -->
+                                        <!-- <div class="text-center d-inline-block">
+                                            <a href="" target="_blank" class="categories_social">
+                                                <div class="categories"><i class="fab fa-linkedin-in"></i></div>
+                                            </a>
+                                        </div> -->
+                                    </div>
+                                    <h3 class="entry-title"><a href="#">{{data?.blog_title}}</a></h3>
+                                    <div class="post-content" [innerHTML]="data?.blog_description">
+                                        <!-- <p>
+                                            It’s hard to learn this but it’s not impossible. From many years, I was a
+                                            person who used to take everything personally. I couldn’t let go of things
+                                            and people. If something bothered me, it used to get stuck on me. And when I
+                                            developed PTSD, situation became worse. Everything bothered me, stressed me.
+                                            Even very small things.
+                                        </p>
+                                        <p> But now I won the battle. Now nothing stress me as I have learned to let go
+                                            of things which I can’t control. I know I can’t control the actions of
+                                            others, I can only control what I do with myself afterward.
+                                        </p>
+                                        <p>
+                                            ” Those who have a strong sense of love and belonging have the courage to be
+                                            imperfect.” – Brene Brown</p>
+                                        <p>
+                                            From 2 weeks, I was not writing here, that doesn’t mean I was not working. I
+                                            was actually working over time. I am working on my dreams. And when we are
+                                            working on something important, we need to be fully present on it.</p>
+                                        <p>
+                                            In between that, many things happened which were out of my control and I
+                                            felt overwhelmed with them. I was shut for 3 days. It took me time to get
+                                            back.</p>
+                                        <p>
+                                            But I am very resilient. I started again. I don’t lose hope and stop. I
+                                            learned one more important lesson. This time I learned very fast. I am a
+                                            quick learner. And I am not alone in my journey. I have supporters like you,
+                                            to encourage me, to motivate me.</p>
+                                        <p>
+                                            From my experience, I will say you can only exist, you can only belong to
+                                            yourself, and you can only be responsible for your own happiness or
+                                            belonging or whatever.</p>
+                                        <p>
+                                            We’ve all heard the phrase, 6 months of hard work and focus can put you
+                                            years ahead in life. But nobody talks about how it can be done. You cannot
+                                            change your destination overnight, but you can change your direction
+                                            overnight.
+                                        </p> -->
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <aside id="secondary">
+                        <section class="right_block">
+                            <h2 class="title">Popular Tags</h2>
+                            <div class="tag_button">
+                                <button *ngFor="let tag of blogTags | async" class="btn btn-green-tag mt-2"
+                                    (click)="openTag(tag?.blog_tag_id ?? '0')">{{tag?.tag_name}}</button>
+                            </div>
+                        </section>
+                        <section class="blog_advertisment">
+                                <p>ad</p>
+                        </section>
+                        <section class="right_block">
+                            <h2 class="title">Recent Posts</h2>
+                            <div class="blog_right_list">
+                                <a class="resent-post clearfix" *ngFor="let data of recentBlogs | async"
+                                    (click)="recentBlog(data)">
+                                    <div class="post-thumbs">
+                                        <img id="imagethumbPreview"
+                                            src='{{imageUrl + "assets/blogs/" + data?.blog_image }}' alt=""
+                                            class="attachment-thumbnail size-thumbnail wp-post-image">
+                                    </div>
+                                    <div class="content" style="display: block !important;">
+                                        <h4> <span>{{data?.blog_title | substr: 50}}</span></h4>
+                                        <span>
+                                            <p class="blog_description"
+                                                [innerHTML]="data?.blog_description | substr: 50"></p>
+                                        </span>
+                                    </div>
+                                </a>
+                                <!-- <a class="resent-post clearfix" href="">
+                                    <div class="post-thumbs">
+                                        <img id="imagethumbPreview" src="assets/images/mom-letter.png" alt=""
+                                            class="attachment-thumbnail size-thumbnail wp-post-image">
+                                    </div>
+                                    <div class="content" style="display: block !important;">
+                                        <h4> <span>A letter from a MOM after divorce…</span></h4>
+                                        <span>
+                                            <p>I feel for you more than anyone in the world. Always remember that Mommy
+                                                ...
+                                            </p>
+                                        </span>
+                                    </div>
+                                </a> -->
+                            </div>
+                        </section>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- blog end here -->
+<!-- leave comment start here -->
+<section class="comment_sec">
+    <div class="container-fluid">
+        <div class="row col-md-12 comment_row">
+            <div class="comment_div col-md-12 col-sm-12">
+                <h5>Leave Comment</h5>
+                <form [formGroup]="blogdetailForm">
+                    <textarea name="message" id="message" class="form-control" rows="5" cols="25"
+                        placeholder="write message" formControlName="blog_comment"></textarea>
+                    <div class="text-right mt-4">
+                        <!-- <a href="" class="btn btn-green1">SUBMIT</a> -->
+                        <button type="submit" class="btn btn-green1" [disabled]="!blogdetailForm.valid"
+                            (click)="btnsubmit()">SUBMIT</button>
+                    </div>
+                </form>
+            </div>
+            <div class="comment_div col-md-12 col-sm-12">
+                <h5 class="mt-3">All Comments</h5>
+                <ul class="recent-logs">
+                    <li *ngFor="let comments of commentsDetails | async">
+                        <p class="text-sm mb-0 lh-1">{{comments?.blog_comment}}</p>
+                        <small class="text-muted">{{comments?.created_on | date: 'medium'}}</small>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- leave comment end here -->

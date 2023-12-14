@@ -1,0 +1,105 @@
+ <!-- start ebook section -->
+ <section class="ebook-section" style="background-image: url(assets/images/shop-banner.png);">
+    <div class="container">
+        <div class="row">
+            <div class="content-column col-lg-12 col-md-12 col-sm-12">
+                <div class="content-box box-con">
+                    <!-- <div class="text">
+                            <h1>Blog</h1>
+                        </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--end ebook section -->
+<!-- shop details section start here -->
+<section class="shop_details">
+    <div class="container-fluid">
+        <div class="row col-md-12 col-sm-12 shop_details_row" *ngFor="let item of shopItemDetails$ | async">
+            <div class="col-md-4 col-sm-12 shop_details_col">
+                <div class="shop_details_img">
+                    <img src='{{imageUrl+ "assets/items/" + item?.item_image }}' class="img-fluid" alt="candle image">
+                </div>
+            </div>
+            <div class="col-md-8 col-sm-12 shop_details_col">
+                <div class="shop_details_text">
+                    <h5>{{item?.item_name}}</h5>
+                    <p class="product_price">{{item?.item_new_price |currency:'CAD':'symbol-narrow'}}</p>
+                    <p class="product_discription">{{item?.item_title}}</p>
+                    <div>
+                        <p>Quantity</p>
+                    </div>
+                    <div class="d-flex quantity_cart">
+                        <div id="field1">
+                            <button type="button" id="sub" class="sub" (click)="Dec()">-</button>
+                            <input class="input" type="text" [(ngModel)]="quantityValue"/>
+                            <button type="button" id="add" class="add" (click)="Inc()">+</button>
+                        </div>
+                        <div class="add-cart mt-0">
+                            <a (click)="goToCart(item)" class="btn btn-green1">
+                                <i class="fas fa-cart-plus"></i> Add To Cart
+                            </a>
+                        </div>
+                        <!-- <div class="icon-item">
+                            <a href=""><i class="fas fa-heart"></i></a>
+                            <a href=""><i class="fas fa-envelope"></i></a>
+                            <a href=""><i class="fas fa-share"></i></a>
+                        </div> -->
+                    </div>
+                    <!-- <a href="" class="btn btn-green1">Add Cart</a> -->
+                    <hr class="divider1">
+                    <p class="product_discription">Category : <a href="" class="product_category">{{item?.category_name}}</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- shop details section end here -->
+<!-- leave comment start here -->
+<section class="about_details">
+    <div class="container-fluid">
+        <div class="row col-md-12 about_details_row">
+            <div class="about_details_div col-md-12 col-sm-12">
+                <h5>About This Item</h5>
+                <ul class="about_details_list">
+                    <li *ngFor="let item of shopItemDetails$ | async" [innerHTML]="item?.item_description"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- leave comment end here -->
+<!-- shop related product start here -->
+<section class="shop mb-4">
+    <div class="container-fluid">
+        <div class="row col-md-12 col-sm-12 shop_row">
+            <div class="col-md-12 col-sm-12 shop_text">
+                <h5>Related Products</h5>
+            </div>
+            <div class="col-md-3 col-sm-12 shop_col" *ngFor="let item of relatedProducts$ | async">
+                <div class="shop_slide">
+                    <div class="shop_img">
+                        <img src='{{imageUrl+ "assets/items/" + item?.item_image }}' class="img-fluid" alt="shop image" />
+                    </div>
+                    <div class="shop_content">
+                        <h3 class="shop_title">
+                            <a>{{item?.item_name}}</a>
+                        </h3>
+                    </div>
+                    <div class="shop_btn d-flex">
+                        <!-- <div class="row d-flex"> -->
+                        <div class="col-md-6 col-sm-12 shop_item_price">
+                            <a href="#" class="item_price">{{item?.item_new_price |currency:'CAD':'symbol-narrow'}}</a>
+                        </div>
+                        <div class="col-md-6 col-sm-12 text-right shop_item_btn">
+                            <a class="btn btn-green1" (click)="addToCart(item)">Add Cart</a>
+                        </div>
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- shop related product end here -->

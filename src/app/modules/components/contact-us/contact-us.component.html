@@ -1,0 +1,277 @@
+<!-- start ebook section -->
+<!-- <section class="ebook-section" style="background-image: url(assets/images/contact-us.png);">
+    <div class="container">
+        <div class="row">
+            <div class="content-column col-lg-12 col-md-12 col-sm-12">
+                <div class="content-box box-con">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+<!--end ebook section -->
+<!-- contact section start -->
+<!-- <section class="contact">
+    <div class="container">
+        <div class="row col-md-12 col-sm-12">
+            <div class="col-md-6 col-sm-12">
+                <div class="contact-text contact-address">
+                    <h5>Contact Details</h5>
+                    <p class="contact-ptext"><i class="fas fa-map-marker-alt"></i><span>Address : San Antonio, Texas
+                            (USA)</span></p>
+                    <p><i class="fas fa-phone-alt"></i><span>Phone: +1 210 589 4693</span> </p>
+                    <p><i class="fas fa-envelope"></i><a href="mailto:Help@healing2peace.com">Mail:
+                            anju29peace@gmail.com</a></p>
+                    <p><span><strong>Availability</strong> : 10:00Hrs CST - 18:00Hrs CST</span> </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="contact-text">
+                    <h5>Submit your query</h5><br>
+                    <form [formGroup]="contactForm">
+                        <div class="row">
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" class="form-control" name="name"
+                                        placeholder="Enter your full name" required="required"
+                                        formControlName="full_name" />
+                                    <span style="color: red; float: right;"
+                                        *ngIf="contactForm.get('full_name')?.hasError('required') && contactForm.get('full_name')?.touched">Name
+                                        is required</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" class="form-control" name="email"
+                                        placeholder="Enter your email address" required="required"
+                                        formControlName="email" />
+                                    <span style="color: red; float: right;"
+                                        *ngIf="contactForm.get('email')?.hasError('required') && contactForm.get('email')?.touched">Email
+                                        is required</span>
+                                    <span style="color: red; float: right;"
+                                        *ngIf="contactForm.get('email')?.errors?.email">Invalid Email</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                    <input type="text" class="form-control" name="phone"
+                                        placeholder="Enter your phone number" required="required"
+                                        formControlName="phone_number" maxlength="10" minlength="10" />
+                                    <span style="color: red; float: right;"
+                                        *ngIf="contactForm.get('phone_number')?.hasError('required') && contactForm.get('phone_number')?.touched">Phone
+                                        no is required</span>
+                                    <span style="color: red; float: right;"
+                                        *ngIf="contactForm.get('phone_number')?.errors?.minlength">Phone no must be 10
+                                        digit</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <input type="text" class="form-control" name="subject"
+                                        placeholder="Enter your subject" formControlName="subject" maxlength="50" />
+                                    <span style="color: red; float: right;"
+                                        *ngIf="contactForm.get('subject')?.hasError('required') && contactForm.get('subject')?.touched">Subject
+                                        is required</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea name="message" id="message" class="form-control" rows="5" cols="25"
+                                        placeholder="write message" formControlName="message"
+                                        maxlength="250"></textarea>
+                                    <span style="color: red; float: right;"
+                                        *ngIf="contactForm.get('message')?.hasError('required') && contactForm.get('message')?.touched">Message
+                                        is required</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-sm-12 text-right">
+                                
+
+                                <button type="submit" class="btn btn-green2" [disabled]="!contactForm.valid"
+                                    (click)="sendMessage()">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+<!-- contact section end -->
+
+
+
+
+<section>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-lg-4 row-cols-sm-2">
+            <!-- start feature box item -->
+            <div class="col md-margin-50px-bottom sm-margin-30px-bottom mb-md-5">
+                <div class="feature-box text-center">
+                    <div class="feature-box-icon">
+                        <i
+                            class="line-icon-Geo2-Love icon-extra-medium text-fast-blue margin-30px-bottom md-margin-15px-bottom sm-margin-10px-bottom"></i>
+                    </div>
+                    <div class="feature-box-content last-paragraph-no-margin">
+                        <span
+                            class="alt-font font-weight-500 margin-10px-bottom d-block text-extra-dark-gray text-small text-uppercase">Address</span>
+                        <span class="fs-5 d-inline-block lg-w-90 md-w-60 sm-w-80 xs-w-100">3830 Parkdale Dr #1311, <br>San Antonio, TX 78229, <br>United States</span>
+                    </div>
+                </div>
+            </div>
+            <!-- end feature box item -->
+            <!-- start feature box item -->
+            <div class="col md-margin-50px-bottom sm-margin-30px-bottom mb-md-5">
+                <div class="feature-box text-center">
+                    <div class="feature-box-icon">
+                        <i
+                            class="line-icon-Headset icon-extra-medium text-fast-blue margin-30px-bottom md-margin-15px-bottom sm-margin-10px-bottom"></i>
+                    </div>
+                    <div class="feature-box-content last-paragraph-no-margin">
+                        <span
+                            class="alt-font font-weight-500 margin-10px-bottom d-block text-extra-dark-gray text-small text-uppercase">Let's
+                            Connect</span>
+                        <span class="fs-5">Call / Text:<br/> +1 210 589 4693</span>
+                    </div>
+                </div>
+            </div>
+            <!-- end feature box item -->
+            <!-- start feature box item -->
+            <div class="col xs-margin-30px-bottom">
+                <div class="feature-box text-center">
+                    <div class="feature-box-icon">
+                        <i
+                            class="line-icon-Mail-Read icon-extra-medium text-fast-blue margin-30px-bottom md-margin-15px-bottom sm-margin-10px-bottom"></i>
+                    </div>
+                    <div class="feature-box-content last-paragraph-no-margin mb-4 mb-lg-0">
+                        <span
+                            class="alt-font font-weight-500 margin-10px-bottom d-block text-extra-dark-gray text-small text-uppercase">E-mail
+                            Us</span>
+                        <span class="fs-5"><a href="mailto:anju29peace@gmail.com"
+                                class="text-dark text-sky-blue-hover">healing2peace@gmail.com</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- end feature box item -->
+            <!-- start feature box item -->
+            <div class="col">
+                <div class="feature-box text-center">
+                    <div class="feature-box-icon">
+                        <i
+                            class="line-icon-Alarm icon-extra-medium text-fast-blue margin-30px-bottom md-margin-15px-bottom sm-margin-10px-bottom"></i>
+                    </div>
+                    <div class="feature-box-content last-paragraph-no-margin">
+                        <span
+                            class="alt-font font-weight-500 margin-10px-bottom d-block text-extra-dark-gray text-small text-uppercase">Availability</span>
+                        <span class="fs-5 d-inline-block lg-w-90 md-w-60 sm-w-80 xs-w-100"> Mon - Fri <br/>9:00 AM - 5:00 PM <br/>(Central Standard Time)</span>
+                    </div>
+                </div>
+            </div>
+            <!-- end feature box item -->
+        </div>
+    </div>
+</section>
+
+
+
+<section class="big-section wow animate__fadeIn" style="visibility: visible; animation-name: fadeIn;">
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <form [formGroup]="contactForm">
+                    <div class="row row-cols-1 row-cols-md-2">
+
+                        <div class="col margin-4-rem-bottom sm-margin-25px-bottom">
+                            <input class="medium-input bg-white margin-25px-bottom required" type="text" name="name"
+                                placeholder="Your name" formControlName="full_name" required="">
+
+                            <input class="medium-input bg-white margin-25px-bottom required" type="email" name="email"
+                                placeholder="Your email address" formControlName="email">
+                            <input class="medium-input bg-white margin-25px-bottom required" type="tel" name="phone"
+                                placeholder="Your mobile" formControlName="phone_number">
+                            <input class="medium-input bg-white mb-0" type="text" name="subject" placeholder="Subject"
+                                formControlName="subject">
+                        </div>
+                        <div class="col margin-4-rem-bottom sm-margin-20px-bottom">
+                            <textarea class="medium-textarea bg-white h-250px" rows="6" name="comment"
+                                formControlName="message" placeholder="Your message"></textarea>
+                        </div>
+                        <div class="col text-start sm-margin-20px-bottom">
+                            <input type="checkbox" name="terms_condition" id="terms_condition" value="1"
+                                class="terms-condition d-inline-block align-top w-auto mb-0 margin-10px-right margin-5px-top required">
+                            <label for="terms_condition"
+                                class="text-small d-inline-block align-top w-85 md-w-90 xs-w-85">I
+                                accept the terms &amp; conditions and I understand that my data will be hold securely in
+                                accordance with the <a href="#" target="_blank"
+                                    class="text-decoration-underline text-extra-dark-gray">privacy policy</a>.</label>
+                        </div>
+                        <div class="col text-center text-md-end mt-3 mt-lg-0">
+                            <input type="hidden" name="redirect" value="">
+                            <button id="project-contact-us-button"
+                                class="btn btn-medium btn-fancy btn-gradient-sky-blue-pink mb-0 submit"
+                                type="submit" [disabled]="!contactForm.valid"
+                                (click)="sendMessage()">Send
+                                Message</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="form-results d-none"></div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="big-section2" style="visibility: visible; animation-name: fadeIn;">
+    <div class="container">
+        <div class="row  justify-content-center">
+            <div class="col-md-12 text-center ">
+                <h6 class="alt-font text-extra-dark-gray font-weight-500">Let's Get Social</h6>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-12 col-md-10 col-sm-12 text-center elements-social social-icon-style-09">
+                <ul class="large-icon">
+                    <li><a class="facebook" href="https://www.facebook.com/healing2peace" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a></li>
+                    <li><a class="twitter" href="https://twitter.com/healing2peace" target="_blank"><i
+                                class="fab fa-twitter"></i></a></li>
+                    <li><a class="youtube" href="https://www.youtube.com/@Healing2Peace" target="_blank"><i
+                                class="fab fa-youtube"></i></a></li>
+                    <li><a class="linkedin" href="https://www.linkedin.com/company/healing2peace-llc/"
+                            target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a class="instagram" href="https://www.instagram.com/healing2peace/" target="_blank"><i
+                                class="fab fa-instagram"></i></a></li>
+                </ul>
+                <h6 _ngcontent-bii-c73="" class="alt-font text-extra-dark-gray font-weight-300">#healing2peace</h6>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- map start here -->
+<section class="map ">
+    <div class="container-fluid">
+        <div class="row map-row">
+            <div class="col-sm-12 col-md-12 p-0 m-0">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2898.3252803244336!2d-98.56420056659735!3d29.52553096721882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a14a15044cc93b%3A0x6763dd7a71ab31b1!2sThe%20Wisdom%20PRO!5e0!3m2!1sen!2sin!4v1676114634117!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- map end here -->

@@ -1,0 +1,184 @@
+<!-- start ebook section -->
+<section class="ebook-section" style="background-image: url(assets/images/shop-banner.png);">
+    <div class="container">
+        <div class="row">
+            <div class="content-column col-lg-12 col-md-12 col-sm-12">
+                <div class="content-box box-con">
+                    <!-- <div class="text">
+                            <h1>Blog</h1>
+                        </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--end ebook section -->
+<!-- tab section start -->
+<section class="tab">
+    <div class="container-fluid" width="100%">
+        <div class="row" width="100%">
+            <div class="col-sm-12 col-lg-9 col-md-9 col-xl-9">
+                <nav class="tab-nav">
+                    <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-checkout-tab" data-toggle="tab" href="#nav-checkout"
+                            role="tab" aria-controls="nav-checkout" aria-selected="true">Checkout Addresses</a>
+
+                        <a class="nav-item nav-link d-none" id="nav-shipping-tab" data-toggle="tab" href="#nav-shipping"
+                            role="tab" aria-controls="nav-shipping" aria-selected="false">Shipping Information</a>
+
+                        <a class="nav-item nav-link d-none" id="nav-billing-tab" data-toggle="tab" href="#nav-billing"
+                            role="tab" aria-controls="nav-billing" aria-selected="false">Billing Information</a>
+
+                        <a class="nav-item nav-link d-none" id="nav-place-tab" data-toggle="tab" href="#nav-place"
+                            role="tab" aria-controls="nav-place" aria-selected="false">Place Order</a>
+
+                        <a class="nav-item nav-link" id="nav-order-tab" data-toggle="tab" href="#nav-order" role="tab"
+                            aria-controls="nav-order" aria-selected="false">Order Success</a>
+                    </div>
+                </nav>
+                <div class="tab-content py-4 px-4 px-sm-0" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-checkout" role="tabpanel"
+                        aria-labelledby="nav-checkout-tab">
+
+                        <!--- Payment Gateway Code Start -->
+                        <form [formGroup]="checkoutFormGroup">
+                        <div class="col-md-12 contact-reach-us ">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for=""> <span class="text-success">Enter Your Name *</span></label>
+                                        <input type="text" class="form-control" formControlName="user_name" placeholder="enter your name"
+                                            required="required" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for=""><span class="text-success">Enter Your Email Id *</span></label>
+                                        <input type="email" class="form-control" formControlName="user_email"
+                                            placeholder="enter your email id" required="required" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for=""><span class="text-success">Phone*</span></label>
+                                        <input type="tel" class="form-control" formControlName="user_phone"
+                                            placeholder="enter your phone number" required="required" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for=""><span class="text-success">Amount*</span></label>
+                                        <input type="text" class="form-control" formControlName="net_amount"
+                                            required="required" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for=""><span class="text-success">Your Purpose *</span></label>
+                                        <textarea rows="4" cols="20" class="form-control" formControlName="special_delivery_notes">Enter name</textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 mt-20">
+                                    <button class="btn btn-green1" (click)="completeCheckout()" [disabled]="!checkoutFormGroup.valid">Go To Checkout</button>
+                                </div>
+                            </div>
+                            <p class="form-message"></p>
+                        </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade  d-none" id="nav-shipping" role="tabpanel"
+                        aria-labelledby="nav-shipping-tab">
+                        <h2>Shipping Information</h2>
+                        <br>
+                        <p>
+                            Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate,
+                            tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus
+                            et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl
+                            ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad
+                            litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at
+                            ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum.
+                            Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel
+                            tellus non nunc mattis lobortis.
+                        </p>
+                        <br>
+                    </div>
+                    <div class="tab-pane fade d-none" id="nav-billing" role="tabpanel" visible="false"
+                        aria-labelledby="nav-billing-tab">
+                        <h2>Billing Information</h2>
+                        <br>
+                        <p>
+                            Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate,
+                            tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus
+                            et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl
+                            ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad
+                            litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at
+                            ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum.
+                            Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel
+                            tellus non nunc mattis lobortis.
+                        </p>
+                        <br>
+                    </div>
+                    <div class="tab-pane fade" id="nav-place" role="tabpanel" aria-labelledby="nav-place-tab">
+                        <h2>Place Order</h2>
+                        <br>
+                        <p>
+                            Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate,
+                            tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus
+                            et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl
+                            ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad
+                            litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at
+                            ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum.
+                            Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel
+                            tellus non nunc mattis lobortis.
+                        </p>
+                        <br>
+                    </div>
+                    <div class="tab-pane fade text-center" id="nav-order" role="tabpanel"
+                        aria-labelledby="nav-order-tab">
+                        <div>
+                            <img src="assets/images/noorders.png" style="height: 200px; width: 500px;" class="img-fluid">
+                        </div>
+                        <br>
+                        <h2>No Order Found</h2>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-3 col-md-3 col-xl-3">
+                <div class="checkout-box">
+                    <h4>Your Checkout</h4>
+                    <div class="billing-box">
+                        <h6>Billing Address</h6>
+                        <p>
+                            San Antonio, Texas (USA)
+                        </p>
+                        <p>Telephone: 1 210 589 4693</p>
+                        <p>Fax: 466523</p>
+                    </div>
+                    <div class="shipping-box">
+                        <h6>Shipping Address </h6>
+                        <p>
+                            San Antonio, Texas (USA)
+                        </p>
+                        <p>Telephone: 1 210 589 4693</p>
+                        <p>Fax: 466523</p>
+                    </div>
+                    <div class="method-box">
+                        <h6>Shipping Method</h6>
+                        <p>Flat Rate - Fixed</p>
+                        <p>₹15.00</p>
+                    </div>
+                    <div class="payment-box">
+                        <h6>Payment Method</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- tab section end -->

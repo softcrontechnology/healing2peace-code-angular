@@ -1,0 +1,13 @@
+section {
+    padding: 70px 0;
+    overflow: hidden;
+}
+.bg-light-blue {
+    background-color: #e1e2e4;
+}
+.padding-2-rem-all {
+    padding: 2rem;
+}
+.margin-top{
+    margin-top:25px;
+}

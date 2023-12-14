@@ -1,0 +1,123 @@
+@import '../../../../assets/font/font-family.css';
+
+.ebook-section{
+    background-image: url("../../../../assets/images/about-us.png");
+    background-size: 100% 350px;
+}
+.about-more img{
+    width: 400px;
+    height: 400px;
+}
+@media (max-width:991.9px) {
+    .about-more{
+        padding: 0 !important;
+        /* margin: 0; */
+    }
+    .about-more img{
+        width: 400px;
+        height: 400px;
+    }
+    .about-more-right-img{
+        display: flex !important;
+        justify-content: start;
+        padding: 0;
+    }
+    .about-more-left-img{
+        display: flex !important;
+        justify-content: start;
+        padding: 0;
+    }
+    .about-more p{
+        font-size: 16px;
+        padding-left: 0 !important;
+        /* margin: 0 10px; */
+        margin-bottom: 5px;
+        /* padding-right: 0; */
+        text-align:justify;
+    }
+    .about-more span{
+        /* font-size: 16px; */
+        padding-left: 0;
+        text-align: center;
+        margin-bottom: 5px;
+        padding-right: 0;
+    }
+    .about-more-content-left{
+        padding: 0;
+    }
+    .about-more-content-left p{
+        padding: 0;
+    }
+    .about-more-content-right p{
+        padding: 0;
+    }
+    .about-more-content-right{
+        padding: 0;
+    }
+}
+@media (max-width:400px) {
+    .about-ceo img{
+        width: 300px;
+        height: 300px;
+        margin-left: 0;
+        margin-bottom: 10px;
+        padding: 0;
+    }
+    .about-more img{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media(min-width:992px) and (max-width:1024px){
+    .about-more img{
+        width: 280px;
+        height:280px;
+    }
+    .about-more-content-right{
+        padding: 0;
+        padding-left:5px ;
+    }
+    .about-more-content-left{
+        padding: 0;        
+        padding-right:5px ;
+    }
+    .about-more-content-right p {
+        padding: 0;
+    }
+    .about-more-content-left p {
+        padding: 0;
+    }
+}
+@media(min-width:1200px) and (max-width:1376px){
+    .ceo-img{
+        padding: 0;
+    }
+    .about-ceo img{
+        width: 350px;
+        height: 350px;
+        margin-left: 0;
+    }
+    .about-more img{
+        width: 350px;
+        height:350px;
+    }
+    .about-more-content-right{
+        padding: 0;
+        padding-left:5px ;
+    }
+    .about-more-content-left{
+        padding: 0;        
+        padding-right:5px ;
+    }
+    .about-more-content-right p {
+        padding: 0;
+    }
+    .about-more-content-left p {
+        padding: 0;
+    }
+}
+
+section.big-section {
+    padding: 90px 0;
+}

@@ -1,0 +1,135 @@
+*{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+body, html{
+	height: 100%;
+}
+body{
+	background: #fff;
+	line-height: normal;
+}
+
+
+.lrpopupinner{
+	position: fixed;
+	width: 100%;
+	/* height: 100%; */
+	z-index: 6;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow-y:auto;
+	padding: 60px 40px;
+}
+
+.lrpopup{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 6;
+	display: none;
+}
+
+
+  /* Subscribe Card */
+  .subscribe-card {
+    position: relative;
+    padding: 3em 4em;
+    background-color: white;
+    box-shadow: 2px 0 15px -2px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    display: grid;
+    grid-row-gap: 1rem;
+    row-gap: 1rem;
+    transition: all .1s ease-in-out;
+  }
+  
+  .subscribe-card > h2 {
+    color: #3e54ac;
+  
+    font-weight: 800;
+    font-size: 1.8em;
+  
+    text-align: center;
+  }
+  
+  .subscribe-card > p {
+    line-height: 1.8;
+    font-weight: 400;
+  
+    text-align: center;
+  
+    opacity: 0.9;
+  }
+  
+  .form-email {
+    margin-top: 1em;
+  
+    display: grid;
+    row-gap: 1.6em;
+  }
+  
+  .input-email {
+    padding: 1em;
+  
+    background-color: #ecf2ff;
+  
+    border: none;
+    outline: none;
+    border-radius: 7px;
+  
+    font-weight: 500;
+  }
+  
+  .send-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    gap: 1em;
+    padding: 0.8em;
+  
+    color: white;
+    background-color: #655dbb;
+  
+    border: none;
+    border-radius: 7px;
+  
+    font-weight: 600;
+  
+    cursor: pointer;
+  }
+  
+  @media (hover: hover) {
+    .send-button:hover {
+      background-color: #bface2;
+      color: #4e31aa;
+  
+      transition: all 0.1s ease-in-out;
+    }
+  }
+  
+
+  .close-button {
+    background: #655dbb;
+    color: #f8f9fa;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: solid 1px #fff;
+}
+
+
+

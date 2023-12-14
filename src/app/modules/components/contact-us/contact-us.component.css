@@ -1,0 +1,183 @@
+.feature-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    transition-duration: .4s;
+    -webkit-transition-duration: .4s;
+    -moz-transition-duration: .4s;
+    -ms-transition-duration: .4s;
+}
+section {
+    padding: 70px 0;
+    overflow: hidden;
+}
+.icon-extra-medium {
+    font-size: 32px;
+}
+[class*=" line-icon"], [class*=" solid-icon"], [class*=" ti-"], [class^=line-icon], [class^=solid-icon], [class^=ti-] {
+    display: inline-block;
+}
+.margin-30px-bottom {
+    margin-bottom: 30px;
+}
+.btn-link.text-fast-blue, .text-fast-blue, a.text-fast-blue-hover:hover {
+    color: #522266;
+}
+[class*=" line-icon-"], [class^=line-icon-] {
+    font-family: icomoon;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.line-icon-Geo2-Love:before {
+    font-family: fontawesome;
+    content: "\f3c5";
+}
+.line-icon-Headset:before {
+    font-family: fontawesome;
+    content: "\f10b";
+}
+.line-icon-Mail-Read:before {
+    font-family: fontawesome;
+    content: "\f658";
+}
+
+.line-icon-Alarm:before {
+    font-family: fontawesome;
+    content: "\f017";
+}
+
+.feature-box .feature-box-content {
+    max-width: 100%;
+}
+.margin-10px-bottom {
+    margin-bottom: 10px;
+}
+.btn-link.text-extra-dark-gray, .text-extra-dark-gray, a.text-extra-dark-gray-hover:hover {
+    color: #522266;
+}
+.text-small {
+    font-size: 13px;
+    line-height: 22px;
+}
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+.last-paragraph-no-margin p:last-of-type {
+    margin-bottom: 0;
+}
+.w-70 {
+    width: 70%;
+}
+
+section.big-section {
+    padding: 90px 0;
+}
+.margin-4-rem-bottom {
+    margin-bottom: 4rem;
+}
+input[type=text], textarea {
+    -webkit-appearance: none;
+}
+.margin-25px-bottom {
+    margin-bottom: 25px;
+}
+.medium-input, .medium-select select, .medium-textarea {
+    padding: 15px 20px;
+    font-size: 14px;
+}
+.bg-white {
+    background-color: #fff;
+}
+input, select, textarea {
+    border: 2px solid #ccc;
+    padding: 10px 15px;
+    width: 100%;
+    margin: 0 0 15px 0;
+    max-width: 100%;
+    resize: none;
+    outline: 0;
+    color: #828282;
+    line-height: initial;
+    word-break: initial;
+}
+.btn, a, a.nav-link, input, select, textarea {
+    transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+.h-250px {
+    height: 288px;
+}
+
+.medium-input, .medium-select select, .medium-textarea {
+    padding: 15px 20px;
+    font-size: 14px;
+}
+input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+}
+.margin-10px-right {
+    margin-right: 10px;
+}
+
+.margin-5px-top {
+    margin-top: 5px;
+}
+input[type=checkbox] + label {
+    color: #939393;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+.text-decoration-underline {
+    text-decoration: underline !important;
+}
+.w-85 {
+    width: 85%;
+}
+.btn.btn-fancy.btn-medium {
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 12px 28px;
+}
+.btn-gradient-sky-blue-pink {
+    background: linear-gradient(245deg, rgba(82,34,102,1) 35%, rgba(0,102,117,1) 100%);
+    color: #fff;
+    background-size: 200% auto;
+    transition: all .3s cubic-bezier(.25,.8,.25,1);
+    border-radius: 5px;
+}
+.btn-gradient-sky-blue-pink:hover{
+    background-position: right center;
+    color: #fff;
+}
+
+@media(min-width:320px) and (max-width:480px){
+    section{
+        padding:25px !important;
+    }
+    .large-icon li {
+        margin: 0px 0px !important;
+    }
+}

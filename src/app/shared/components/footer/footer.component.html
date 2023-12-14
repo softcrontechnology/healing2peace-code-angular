@@ -1,0 +1,48 @@
+<footer class="footer-dark bg-slate-blue">
+    <div class="footer-top footer-area padding-six-tb lg-padding-eight-tb md-padding-50px-tb">
+        <div class="container">
+            <div class="row">
+                <!-- start footer column -->
+                <div class="col-12 highlight col-lg-4 col-sm-12 order-sm-1 order-lg-0 last-paragraph-no-margin md-margin-40px-bottom xs-margin-25px-bottom">
+                    <span class="alt-font heading font-weight-500 d-block margin-20px-bottom xs-margin-10px-bottom">About </span>
+                    <p>We at Healing2Peace, LLC respect and honor authenticity, accountability, and honesty. We are strong believers of each other’s dreams and try to make them a reality with teamwork, collaboration and by harnessing our passion and empathy. </p>
+                </div>
+                <!-- end footer column -->
+                <!-- start footer column -->
+                <div class="col-12 highlight col-lg-4  col-sm-12 order-sm-2 order-lg-0 md-margin-40px-bottom xs-margin-25px-bottom">
+                    <span class="alt-font heading font-weight-500 d-block margin-20px-bottom xs-margin-10px-bottom">Disclaimer</span>
+                    <p>We do not provide any legal/medical advice. Healing2Peace, LLC is here to help you heal and thrive through healthy coping mechanisms. To find legal/medical/mental health services, we can connect you with the trusted resources which helped us.</p>
+                </div>
+
+                <!-- end footer column -->
+                <!-- start footer column -->
+                <div class="col-12 highlight col-xl-4  col-lg-4 col-sm-12 order-sm-3 order-lg-0">
+                    <span class="alt-font heading font-weight-500 d-block margin-20px-bottom xs-margin-10px-bottom">Subscribe To Our Updates</span>
+                    <p>Sign up to receive the latest blogs and updates on new programs and services. Maybe you can relate and find some help in transforming your trauma into triumph. </p>
+                    
+                    <form [formGroup]="subscribeForm">
+                          <div class="newsletter-style-03 position-relative">
+                         <input class="small-input border-color-medium-gray rounded m-0 required" name="" placeholder="Enter your email address" type="email"  formControlName="subscribe_email">
+                            <input type="hidden" name="redirect" value="">
+                          <button class="btn no-border btn-gradient-sky-blue-pink rounded-end submit" type="submit"  [disabled]="!subscribeForm.valid" (click)="subscribe()"><i class="fa-regular fa-paper-plane"></i></button>
+                           <div class="form-results rounded position-absolute d-none"></div>
+                        </div>
+                    </form>
+
+                </div>
+                <!-- end footer column -->
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom padding-7px-tb border-top border-width-1px border-color-white-transparent">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-12 col-md-12 text-center last-paragraph-no-margin sm-margin-20px-bottom">
+                    <p class="footer-nav text-center">Copyright © 2022 by <a href="#" target="_blank" class="text-decoration-line-bottom text-white text-white-hover">Healing2Peace</a>, LLC | All rights reserved.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>

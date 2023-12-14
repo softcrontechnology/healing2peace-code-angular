@@ -1,0 +1,17 @@
+.show {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blog_description{
+    word-wrap: break-word;
+    height: 70px;
+}
+.active{
+    background-color:  black;
+    color: #fff; 
+}
+/* .blog_btn {
+    color: #fff;
+    background: linear-gradient(245deg, rgba(82,34,102,1) 35%, rgba(0,102,117,1) 100%);
+} */

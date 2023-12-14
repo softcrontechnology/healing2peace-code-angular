@@ -1,0 +1,44 @@
+section.big-section {
+    padding: 90px 0;
+}
+.border-btm{
+    border-bottom: 2px solid #ccc !important;
+}
+.border-top{
+    border-bottom: 2px solid #ccc !important;
+}
+
+.card {
+    
+    background: transparent;
+    padding: 0px;
+    border: 0;
+    border-radius: 5px;
+    min-height: 250px;
+    width: 100%;
+}
+.card-header1 {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0;
+    background:linear-gradient(135deg,rgba(0,102,117,0.35) 40%,rgba(82,34,102,0.35) 60%);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+.card-footer{
+    width: 100%;
+}
+.btn.btn-large1 {
+    font-size: 13px;
+    padding: 8px 32px;
+    margin-top: 10px;
+}
+.price-duration{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #60697b;
+    margin-top: auto;
+    margin-bottom: 0.25rem;
+}
+.card > .list-group {
+    width: 100%;
+}

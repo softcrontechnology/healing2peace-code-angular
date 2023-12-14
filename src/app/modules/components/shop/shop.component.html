@@ -1,0 +1,48 @@
+<!-- start ebook section -->
+<section class="ebook-section" style="background-image: url(assets/images/shop-banner.png);">
+    <div class="container">
+        <div class="row">
+            <div class="content-column col-lg-12 col-md-12 col-sm-12">
+                <div class="content-box box-con">
+                    <!-- <div class="text">
+                            <h1>Blog</h1>
+                        </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--end ebook section -->
+<!-- shop start here -->
+<section class="shop mb-4">
+    <div class="container-fluid">
+        <div class="row col-md-12 col-sm-12 shop_row">
+            <div class="col-md-12 col-sm-12 shop_text">
+                <h5>Our Shop</h5>
+            </div>
+            <div class="col-md-3 col-sm-12 shop_col" *ngFor="let items of shopItems$ | async">
+                <div class="shop_slide">
+                    <div class="shop_img">
+                        <img src='{{imageUrl+ "assets/items/" + items?.item_image }}' class="img-fluid" alt="shop image" />
+                    </div>
+                    <div class="shop_content">
+                        <h3 class="shop_title">
+                            <a >{{items?.item_name}}</a>
+                        </h3>
+                    </div>
+                    <div class="shop_btn d-flex">
+                        <!-- <div class="row d-flex"> -->
+                        <div class="col-md-6 col-sm-12 shop_item_price">
+                            <a href="#" class="item_price">{{items?.item_new_price |currency:'CAD':'symbol-narrow'}}</a>
+                        </div>
+                        <div class="col-md-6 col-sm-12 text-right shop_item_btn">
+                            <a (click)="addToCart(items)" class="btn btn-green1">Add Cart</a>
+                        </div>
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- shop end here -->

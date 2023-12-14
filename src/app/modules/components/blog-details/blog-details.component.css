@@ -1,0 +1,31 @@
+.post-content{
+    word-wrap: break-word;
+}
+.blog_description{
+    word-wrap: break-word;
+}
+.tag_cat1{
+     background-color: lightgray !important;
+     padding: 10px;
+}
+
+.tag_cat{
+    background-color: lightgray !important;
+    padding: 5px;
+}
+.blog_advertisment {
+    margin-bottom: 30px;
+    padding: 18px;
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgb(0 0 0 / 5%);
+    margin-left: 20px;
+    background-color: #eee;
+    background-image: url(./../../../../assets/images/advertisment.jpg);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: cover;
+    height: 150px;
+}
+.blog_advertisment p{
+    color: #000;
+}

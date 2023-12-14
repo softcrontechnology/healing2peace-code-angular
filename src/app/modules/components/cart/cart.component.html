@@ -1,0 +1,230 @@
+<!-- start ebook section -->
+<section
+  class="ebook-section"
+  style="background-image: url(assets/images/shop-banner.png)"
+>
+  <div class="container">
+    <div class="row">
+      <div class="content-column col-lg-12 col-md-12 col-sm-12">
+        <div class="content-box box-con">
+          <!-- <div class="text">
+                            <h1>Blog</h1>
+                        </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--end ebook section -->
+<!-- services section start here -->
+<section class="shopping-sec">
+  <div class="container-fluid">
+    <div class="row shop-row-box col-md-12 col-sm-12">
+      <div class="col-md-8"></div>
+      <div class="col-md-4 add-btn">
+        <a class="btn-green"
+          ><i class="fas fa-cart-plus"></i> Cart {{ totalCartCount$ | async }} -
+          {{ totalCartAmount$ | async | currency: "INR" }}</a
+        >
+      </div>
+      <div class="col-md-12 pt-4 table-container table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th rowspan="1" class="a-center">&nbsp;</th>
+              <th rowspan="1" style="width: 30%"><span>Product Name</span></th>
+              <th rowspan="1" style="width: 10%">&nbsp;</th>
+              <th rowspan="1" class="a-center">Edit</th>
+              <th colspan="1" class="a-right"><span>Unit Price</span></th>
+              <th rowspan="1" class="a-right">Qty</th>
+              <th colspan="1" style="width: 20%" class="a-right">Subtotal</th>
+              <th rowspan="1" class="a-left">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              class="first-tbody"
+              *ngFor="let cartItem of allShoppingCartItems | async"
+            >
+              <td class="image">
+                <a class="product-image">
+                  <img
+                    width="75"
+                    alt="Sample Product"
+                    src="{{
+                      imageUrl + 'assets/items/' + cartItem.item.item_image
+                    }}"
+                  />
+                </a>
+              </td>
+              <td>
+                <h3 class="product-name">
+                  <a>{{ cartItem.item.item_name }}</a>
+                </h3>
+              </td>
+              <td class="a-center"></td>
+              <td class="a-center">
+                <a class="edit-bnt"><i class="far fa-edit"></i></a>
+              </td>
+              <td class="a-right">
+                <span class="cart-price"
+                  ><span class="price">{{
+                    cartItem.item.item_new_price | currency: "INR"
+                  }}</span>
+                </span>
+              </td>
+              <td class="a-right">
+                <input
+                  maxlength="12"
+                  class="input-text qty"
+                  title="Qty"
+                  [value]="cartItem.count"
+                />
+              </td>
+              <td class="a-right">
+                <span class="cart-price">
+                  <span class="price">{{
+                    cartItem.count * (cartItem.item.item_new_price ?? 0) | currency: "INR"
+                  }}</span>
+                </span>
+              </td>
+              <td class="a-left">
+                <a class="button remove-item" href="#">
+                  <i class="fas fa-trash-alt"></i>
+                </a>
+              </td>
+            </tr>
+            
+          </tbody>
+          <tfoot>
+            <tr class="first-table">
+              <td colspan="6">
+                <a [routerLink]="['/shop']" class="btn btn-item mt-2">
+                  <span><span>Add More Item</span></span>
+                </a>
+              </td>
+              <td colspan="1"></td>
+              <td colspan="1" class="a-right">
+                <a [routerLink]="['/shop']" class="btn btn-continue">
+                  <span><span>Continue Shopping</span></span>
+                </a>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <div class="col-md-4 mt-4">
+        <h4>Estimate Shipping And Tax</h4>
+        <hr />
+        <div class="shipping-address">
+          <div>
+            <p>Enter your destination to get a shipping estimate.</p>
+            <!-- <ul class="form-list">
+                            <li>
+                                <input type="text" placeholder="Enter your pin code" class="input-text required-entry" title="Sign up for our newsletter" id="newsletter1" name="email" style="width:180px">
+                               <button class="subscribe btn-green1" title="Subscribe" type="submit"><span>Check Pincode</span></button>
+                            </li>
+                            <li>
+                                <label for="region_id">State</label>
+                                <input type="text" class="input-text" value="">
+                                <div class="input-box">
+                                    <br>
+                                    <label >City</label><br>
+                                    <input type="text" class="input-text" value="">
+                                </div>
+                            </li>
+                        </ul> -->
+            <form>
+              <div class="row form_row">
+                <div class="col-sm-12 col-xs-12">
+                  <div class="form-group">
+                    <label for="">Pincode</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name=""
+                      placeholder="enter your pincode"
+                      required="required"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                  <div class="form-group">
+                    <label for="">State</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name=""
+                      placeholder="enter your state"
+                      required="required"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                  <div class="form-group">
+                    <label for="">City</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name=""
+                      placeholder="enter rour city"
+                      required="required"
+                    />
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4"></div>
+      <div class="col-md-4 mt-4">
+        <div class="totals">
+          <h3>Shopping Cart Total</h3>
+          <hr />
+          <div class="inner">
+            <table
+              id="shopping-cart-totals-table"
+              class="table shopping-cart-table-total"
+            >
+              <colgroup>
+                <col />
+                <col width="1" />
+              </colgroup>
+              <tfoot>
+                <tr>
+                  <td class="a-left" colspan="1">
+                    <strong>Grand Total</strong>
+                  </td>
+                  <td class="a-right">
+                    <strong><span class="price">{{totalCartAmount$|async|  currency:"INR"}}</span></strong>
+                  </td>
+                </tr>
+              </tfoot>
+              <tbody>
+                <tr>
+                  <td class="a-left" colspan="1">Subtotal</td>
+                  <td class="a-right"><span class="price">{{totalCartAmount$|async|currency:"INR"}}</span></td>
+                </tr>
+              </tbody>
+            </table>
+            <ul class="checkout a-right">
+              <li>
+                <button
+                  type="button"
+                  title="Proceed to Checkout"
+                  class="button btn-proceed-checkout"
+                  [routerLink]="['/checkout']"
+                >
+                  <span>Proceed to Checkout</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <!--inner-->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Medicine section End here -->

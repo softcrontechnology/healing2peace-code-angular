@@ -1,0 +1,217 @@
+<!-- start ebook section -->
+<!-- <section class="ebook-section" style="background-image: url(assets/images/blog.png)">
+  <div class="container">
+    <div class="row">
+      <div class="content-column col-lg-12 col-md-12 col-sm-12">
+        <div class="content-box box-con">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!--end ebook section -->
+<!-- blog start here -->
+<!-- <div class="blog_section"> -->
+<div class="container blog_section">
+  <div class="row blog_section_row">
+    <div class="col-md-12 col-sm-12">
+      <div id="myBtnContainer" class="filter-section text-center">
+        <!-- <button class="btn btn-green1" (click)="filterSelection('all')">
+          All
+        </button> -->
+        <button *ngFor="let category of BlogCategories | async; let i = index" [ngClass]="{'active': tabIndex === i}"
+          class="btn btn-green1 mt-3" (click)="filterSelection(category?.blog_category_id ?? 0 , i)">
+          {{category?.category_name}}
+        </button>
+      </div>
+      <!-- <div class="row">
+                <div class=""> -->
+      <div class="row">
+        
+        <div *ngFor="let data of allBlogData | async; let i = index;" class="gcolumn col-md-6 col-sm-12 col-lg-4">
+          <div class="blog_slide">
+            <div class="blog_img">
+              <img src='{{imageUrl+ "assets/blogs/" + data?.blog_image }}' class="img-fluid" alt="blog image" />
+            </div>
+            <div class="blog_content">
+              <h3 class="blog_title">
+                <a (click)="readMore(data)">{{data?.blog_title | substr : 30}}</a>
+              </h3>
+              <p class="blog_author">
+                <a class="float-left text-black"><i class="fas fa-hashtag"></i> {{data?.category_name}}</a>
+              </p><br>
+              <p class="blog_description" [innerHTML]="data?.blog_description | substr : 60"></p>
+              <p class="fs-6">
+                <img class="avtar-image" src="../../../../assets/images/page 2/ceo2.jpg" alt="" data-no-retina="">{{ data?.author_name }}
+                <a class="float-right text-black">{{ data?.created_on | date }}</a>
+              </p>
+            </div>
+            <div class="blog_btn">
+              <a (click)="readMore(data)" class="read-more btn btn-block">READ MORE</a>
+              
+            </div>
+          </div>
+        </div>
+        <!-- <div class="gcolumn col-md-4 col-sm-12 child">
+          <div class="blog_slide">
+            <div class="blog_img">
+              <img
+                src="assets/images/work-progress.png"
+                class="img-fluid"
+                alt="blog image"
+              />
+            </div>
+            <div class="blog_content">
+              <h3 class="blog_title">
+                <a href="#"
+                  >I am a Work-In-Progress, not a Problem to be solved…</a
+                >
+              </h3>
+              <p class="blog_author">Anju K</p>
+              <p class="blog_description">
+                By this time, you all must be aware that I am not any character
+                from any of this. Not just me, we all are living a life full of
+                struggles and challenges...
+              </p>
+            </div>
+            <div class="blog_btn">
+              <a
+                [routerLink]="['/blog-details']"
+                target="_blank"
+                class="read-more btn btn-block"
+                >READ MORE</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="gcolumn col-md-4 col-sm-12 decore">
+          <div class="blog_slide">
+            <div class="blog_img">
+              <img
+                src="assets/images/mom-letter.png"
+                class="img-fluid"
+                alt="blog image"
+              />
+            </div>
+            <div class="blog_content">
+              <h3 class="blog_title">
+                <a href="#">A letter from a MOM after divorce…</a>
+              </h3>
+              <p class="blog_author">Anju K</p>
+              <p class="blog_description">
+                I feel for you more than anyone in the world. Always remember
+                that Mommy loves you more than anything in the world you more
+                than anything in the world...
+              </p>
+            </div>
+            <div class="blog_btn">
+              <a
+                [routerLink]="['/blog-details']"
+                target="_blank"
+                class="read-more btn btn-block"
+                >READ MORE</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="gcolumn col-md-4 col-sm-12 child">
+          <div class="blog_slide">
+            <div class="blog_img">
+              <img
+                src="assets/images/focus.png"
+                target="_blank"
+                class="img-fluid"
+                alt="blog image"
+              />
+            </div>
+            <div class="blog_content">
+              <h3 class="blog_title">
+                <a href="#"
+                  >Focus on being productive, instead of being busy…</a
+                >
+              </h3>
+              <p class="blog_author">Anju K</p>
+              <p class="blog_description">
+                If I will spend too much time just thinking about a thing, I’ll
+                never get it done. I have to start working on my goals and my
+                dreams which I always...
+              </p>
+            </div>
+            <div class="blog_btn">
+              <a
+                [routerLink]="['/blog-details']"
+                target="_blank"
+                class="read-more btn btn-block"
+                >READ MORE</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="gcolumn col-md-4 col-sm-12 decor">
+          <div class="blog_slide">
+            <div class="blog_img">
+              <img
+                src="assets/images/work-progress.png"
+                class="img-fluid"
+                alt="blog image"
+              />
+            </div>
+            <div class="blog_content">
+              <h3 class="blog_title">
+                <a href="#"
+                  >I am a Work-In-Progress, not a Problem to be solved…</a
+                >
+              </h3>
+              <p class="blog_author">Anju K</p>
+              <p class="blog_description">
+                By this time, you all must be aware that I am not any character
+                from any of this. Not just me, we all are living a life full of
+                struggles and challenges...
+              </p>
+            </div>
+            <div class="blog_btn">
+              <a
+                [routerLink]="['/blog-details']"
+                target="_blank"
+                class="read-more btn btn-block"
+                >READ MORE</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="gcolumn col-md-4 col-sm-12 parental">
+          <div class="blog_slide">
+            <div class="blog_img">
+              <img
+                src="assets/images/mom-letter.png"
+                class="img-fluid"
+                alt="blog image"
+              />
+            </div>
+            <div class="blog_content">
+              <h3 class="blog_title">
+                <a href="#">A letter from a MOM after divorce…</a>
+              </h3>
+              <p class="blog_author">Anju K</p>
+              <p class="blog_description">
+                I feel for you more than anyone in the world. Always remember
+                that Mommy loves you more than anything in the world you more
+                than anything in the world...
+              </p>
+            </div>
+            <div class="blog_btn">
+              <a
+                [routerLink]="['/blog-details']"
+                target="_blank"
+                class="read-more btn btn-block"
+                >READ MORE</a
+              >
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- blog end here -->

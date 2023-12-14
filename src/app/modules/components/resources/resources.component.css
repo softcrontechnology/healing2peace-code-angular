@@ -1,0 +1,76 @@
+section {
+    padding: 70px 0;
+    overflow: hidden;
+}
+
+.heading {
+    font-size: 2.5rem;
+    text-align: left;
+    font-weight: 700;
+    color: #522266;
+}
+
+.voicemail {
+    font-size: 1.2rem;
+    font-weight: regular;
+    color: #757575;
+}
+
+.help {
+    font-size: 1.2rem;
+    font-weight: regular;
+    color: #757575;
+}
+
+.points {
+    font-size: 1.2rem;
+    font-weight: regular;
+    color: #757575;
+}
+
+.points li {
+    list-style-type: disc;
+}
+
+.highlight {
+    color: #000;
+}
+
+.table-row {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0.5rem 0;
+}
+
+.table-row td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-size: 1rem;
+}
+
+.table-row th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-size: 1.2rem;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    /* background-color: #006675; */
+    background: linear-gradient(135deg,rgba(0,102,117,0.55) 20%,rgba(82,34,102,0.55) 50%);
+    color: #fff;
+}
+
+.table-row tr:nth-child(even) {
+    background-color: #eee;
+}
+
+.help-line h4 {
+    font-family: Quickpen;
+    margin-top: 0.6rem;
+}
+
+@media(min-width:320px) and (max-width:480px) {
+    .resources-row {
+        padding: 2% 0 2% 5%;
+    }
+}
