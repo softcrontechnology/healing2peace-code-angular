@@ -17,9 +17,12 @@
         </div>
         <!-- <div class="col-12 col-md-6 align-self-center header_right"> -->
         <div class="col-md-2 align-self-center header_right">
-            <div class="text-center d-inline-block" *ngFor="let data of socialLinkData | async">
-                <a class="display_table" target="_blank" href="{{data?.link_url}}">
-                    <div class="verticle_middle"><i class="{{data?.link_name}}"></i></div>
+            <div class="text-center d-inline-block"
+                *ngFor="let data of socialLinkData | async">
+                <a class="display_table" target="_blank"
+                    href="{{data?.link_url}}">
+                    <div class="verticle_middle"><i
+                            class="{{data?.link_name}}"></i></div>
                 </a>
             </div>
             <!-- <div class="clearfix"></div> -->
@@ -30,53 +33,73 @@
     <section class="header_main header_padding">
         <div class="container-fluid">
             <div class="row">
-                <nav class="navbar navbar-expand-md navbar-light nav-header shadow">
+                <nav
+                    class="navbar navbar-expand-md navbar-light nav-header shadow">
                     <a [routerLink]="['/index']" class="navbar-brand logo"> <img
-                            src="../../../../assets/images/logo1.png" alt="img" class="logo_width" />
+                            src="../../../../assets/images/logo1.png" alt="img"
+                            class="logo_width" />
                     </a>
                     <div class="btn-navbar">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        <button class="navbar-toggler" type="button"
+                            data-toggle="collapse"
                             data-target="#collapsibleNavbar">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                     </div>
-                    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                    <div class="collapse navbar-collapse justify-content-end"
+                        id="collapsibleNavbar">
                         <ul class="navbar-nav main-menu">
                             <li class="nav-item">
-                                <a class="nav-link" [routerLink]="['/index']" routerLinkActive="active"
+                                <a class="nav-link" [routerLink]="['/index']"
+                                    routerLinkActive="active"
                                     [routerLinkActiveOptions]="{exact:
-                                    true}" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Home
+                                    true}" data-bs-toggle="collapse"
+                                    data-bs-target=".navbar-collapse.show">Home
                                 </a>
                             </li>
                             <li class="nav-item has-child">
-                                <a class="nav-link" [ngClass]="aboutMenu ? 'active':''"
-                                    (click)="openAboutSubMenu()">About Us<i class="bi bi-chevron-down"></i>
+                                <a class="nav-link"
+                                    [ngClass]="aboutMenu ? 'active':''"
+                                    (click)="openAboutSubMenu()">About Us<i
+                                        class="bi bi-chevron-down"></i>
                                 </a>
-                                <ul class="sub-menu" [ngClass]="isAboutSubMenuOpen?'opened':''">
+                                <ul class="sub-menu"
+                                    [ngClass]="isAboutSubMenuOpen?'opened':''">
                                     <li>
-                                        <a [routerLink]="['/about-us/our-ceo-and-founder']" routerLinkActive="active"
+                                        <a
+                                            [routerLink]="['/about-us/our-ceo-and-founder']"
+                                            routerLinkActive="active"
                                             [routerLinkActiveOptions]="{exact:
                                              true}" data-bs-toggle="collapse"
-                                            data-bs-target=".navbar-collapse.show">Our CEO &
+                                            data-bs-target=".navbar-collapse.show">Our
+                                            CEO &
                                             Founder
                                         </a>
                                     </li>
                                     <li>
-                                        <a [routerLink]="['/about-us/our-story']" routerLinkActive="active"
+                                        <a
+                                            [routerLink]="['/about-us/our-story']"
+                                            routerLinkActive="active"
                                             [routerLinkActiveOptions]="{exact:
-                                            true}" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Our
+                                            true}" data-bs-toggle="collapse"
+                                            data-bs-target=".navbar-collapse.show">Our
                                             Story
                                         </a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item has-child">
-                                <a class="nav-link" (click)="openServiceSubMenu()"
-                                    [ngClass]="serviceMenu ? 'active':''">Services<i class="bi bi-chevron-down"></i>
+                                <a class="nav-link"
+                                    (click)="openServiceSubMenu()"
+                                    [ngClass]="serviceMenu ? 'active':''">Services<i
+                                        class="bi bi-chevron-down"></i>
                                 </a>
-                                <ul class="sub-menu" [ngClass]="isServiceSubMenuOpen?'opened':''">
+                                <ul class="sub-menu"
+                                    [ngClass]="isServiceSubMenuOpen?'opened':''">
                                     <li>
-                                        <a [routerLink]="['/services/regain-workshops']" routerLinkActive="active"
+                                        <a
+                                            [routerLink]="['/services/regain-workshops']"
+                                            routerLinkActive="active"
                                             [routerLinkActiveOptions]="{exact:
                                              true}" data-bs-toggle="collapse"
                                             data-bs-target=".navbar-collapse.show">Regain
@@ -84,7 +107,9 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a [routerLink]="['/services/reading-writing-groups']" routerLinkActive="active"
+                                        <a
+                                            [routerLink]="['/services/reading-writing-groups']"
+                                            routerLinkActive="active"
                                             [routerLinkActiveOptions]="{exact:
                                              true}" data-bs-toggle="collapse"
                                             data-bs-target=".navbar-collapse.show">Reading/Writing
@@ -92,7 +117,9 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a [routerLink]="['/services/individual-sessions']" routerLinkActive="active"
+                                        <a
+                                            [routerLink]="['/services/individual-sessions']"
+                                            routerLinkActive="active"
                                             [routerLinkActiveOptions]="{exact:
                                              true}" data-bs-toggle="collapse"
                                             data-bs-target=".navbar-collapse.show">Individual
@@ -100,23 +127,29 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a [routerLink]="['/services/group-coaching']" routerLinkActive="active"
+                                        <a
+                                            [routerLink]="['/services/group-coaching']"
+                                            routerLinkActive="active"
                                             [routerLinkActiveOptions]="{exact:
                                              true}" data-bs-toggle="collapse"
-                                            data-bs-target=".navbar-collapse.show">Group Coaching
+                                            data-bs-target=".navbar-collapse.show">Group
+                                            Coaching
                                         </a>
                                     </li>
                                     <li>
-                                        <a [routerLink]="['/services/seminars-webinars']" routerLinkActive="active"
+                                        <a
+                                            [routerLink]="['/services/seminars-webinars']"
+                                            routerLinkActive="active"
                                             [routerLinkActiveOptions]="{exact:
                                              true}" data-bs-toggle="collapse"
-                                            data-bs-target=".navbar-collapse.show">Seminars &
+                                            data-bs-target=".navbar-collapse.show">Seminars
+                                            &
                                             Webinars
                                         </a>
                                     </li>
                                 </ul>
                             </li>
-                           <!-- <li class="nav-item has-child"> 
+                            <!-- <li class="nav-item has-child"> 
                                 <a class="nav-link" [ngClass]="shopMenu ? 'active':''"
                                     (click)="openShopSubMenu()">Shop<i class="bi bi-chevron-down"></i>
                                 </a>
@@ -152,54 +185,87 @@
                                 </ul>
                             </li>-->
                             <li class="nav-item">
-                                <a class="nav-link" [routerLink]="['/blogs']" routerLinkActive="active"
+                                <a class="nav-link" [routerLink]="['/blogs']"
+                                    routerLinkActive="active"
                                     [routerLinkActiveOptions]="{exact:
-                                      true}" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Blogs
+                                      true}" data-bs-toggle="collapse"
+                                    data-bs-target=".navbar-collapse.show">Blogs
                                 </a>
                             </li>
                             <li class="nav-item has-child">
-                                <a class="nav-link" [ngClass]="resourcesMenu ? 'active':''"
-                                    (click)="openResourcesSubMenu()">Resources<i class="bi bi-chevron-down"></i>
+                                <a class="nav-link"
+                                    [ngClass]="resourcesMenu ? 'active':''"
+                                    (click)="openResourcesSubMenu()">Resources<i
+                                        class="bi bi-chevron-down"></i>
                                 </a>
-                                <ul class="sub-menu" [ngClass]="isResourcesSubMenuOpen?'opened':''">
+                                <ul class="sub-menu"
+                                    [ngClass]="isResourcesSubMenuOpen?'opened':''">
                                     <li>
-                                        <a [routerLink]="['resources/community-partners']" routerLinkActive="active"
+                                        <a
+                                            [routerLink]="['resources/community-partners']"
+                                            routerLinkActive="active"
                                             [routerLinkActiveOptions]="{exact:
                                          true}" data-bs-toggle="collapse"
-                                            data-bs-target=".navbar-collapse.show">Community Partners
+                                            data-bs-target=".navbar-collapse.show">Community
+                                            Partners
                                         </a>
                                     </li>
                                     <li>
-                                        <a [routerLink]="['resources/business-partners']" routerLinkActive="active"
+                                        <a
+                                            [routerLink]="['resources/business-partners']"
+                                            routerLinkActive="active"
                                             [routerLinkActiveOptions]="{exact:
                                           true}" data-bs-toggle="collapse"
-                                            data-bs-target=".navbar-collapse.show">Business Partners
+                                            data-bs-target=".navbar-collapse.show">Business
+                                            Partners
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://helpingsurvivors.org/workplace-sexual-assault/"
+                                            target="_blank">
+                                            Sexual Assault in the Workplace
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://helpingsurvivors.org/"
+                                            target="_blank">
+                                            Helping Survivors
                                         </a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" [routerLink]="['/join']" routerLinkActive="active"
+                                <a class="nav-link" [routerLink]="['/join']"
+                                    routerLinkActive="active"
                                     [routerLinkActiveOptions]="{exact:
-                                   true}" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Join
+                                   true}" data-bs-toggle="collapse"
+                                    data-bs-target=".navbar-collapse.show">Join
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" [routerLink]="['/membership']" routerLinkActive="active"
+                                <a class="nav-link"
+                                    [routerLink]="['/membership']"
+                                    routerLinkActive="active"
                                     [routerLinkActiveOptions]="{exact:
-                                   true}" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Membership
+                                   true}" data-bs-toggle="collapse"
+                                    data-bs-target=".navbar-collapse.show">Membership
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" [routerLink]="['/support']" routerLinkActive="active"
+                                <a class="nav-link" [routerLink]="['/support']"
+                                    routerLinkActive="active"
                                     [routerLinkActiveOptions]="{exact:
-                                   true}" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Support
+                                   true}" data-bs-toggle="collapse"
+                                    data-bs-target=".navbar-collapse.show">Support
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" [routerLink]="['/contact']" routerLinkActive="active"
+                                <a class="nav-link" [routerLink]="['/contact']"
+                                    routerLinkActive="active"
                                     [routerLinkActiveOptions]="{exact:
-                                 true}" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Contact
+                                 true}" data-bs-toggle="collapse"
+                                    data-bs-target=".navbar-collapse.show">Contact
                                 </a>
                             </li>
                         </ul>
